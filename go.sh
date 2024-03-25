@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt install git curl tree dialog -y
-
+mkdir ~/github
 read -p "Saisissez l'adresse mail utilisée avec votre compte Github : " email
 read -p "Saisissez le nom du compte github : " gaccount
 read -p "Saisissez le token que vous as fournis Github : " token
@@ -19,3 +19,5 @@ curl -X POST -H "Authorization: token $token" \
 
 sed -i '/export Git_Token/d' ~/.bashrc
 echo 'export Git_Token="'$token'"' >> ~/.bashrc
+source ~/.bashrc
+cd ~/.github
