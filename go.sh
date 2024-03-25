@@ -20,4 +20,4 @@ curl -X POST -H "Authorization: token $token" \
 sed -i '/export Git_Token/d' ~/.bashrc
 echo 'export Git_Token="'$token'"' >> ~/.bashrc
 source ~/.bashrc
-cd ~/.github
+cd ~/github
